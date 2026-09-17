@@ -1,6 +1,6 @@
 def bmi_calculator(weight,height):
-    bmi = weight/(height**2)
-    return bmi
+    bmi = weight/((height/100)**2)
+    return round(bmi,2)
 
 def bmr_calculator(gender,age,weight,height):
     if gender == "male":
@@ -19,13 +19,17 @@ def tdee_calculator(bmr,activity):
         "Extra Active":1.90
     }
     tdee = bmr*activity_factor[activity]
-    return tdee
+    return round(tdee,2)
 
 def calories_target(tdee,aim) :
-    if aim == "maintain":
+    if aim == "weight maintain":
         calorie = tdee 
-    elif aim == "loss":
+    elif aim == "weight loss":
         calorie= tdee-400
-    elif aim == "gain":
+    elif aim == "weight gain":
         calorie = tdee+300
-    return calorie 
+    return round(calorie,2) 
+# print(bmi_calculator(60,150))
+# bmr=bmr_calculator("male",25,50,150)
+# tdee = tdee_calculator(bmr,"Very Active")
+# print(calories_target(tdee,"weight gain"))
