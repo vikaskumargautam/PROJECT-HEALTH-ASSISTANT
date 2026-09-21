@@ -3,10 +3,10 @@ def bmi_calculator(weight,height):
     return round(bmi,2)
 
 def bmr_calculator(gender,age,weight,height):
-    if gender == "male":
+    if gender == "Male":
         bmr = (10*weight)+(6.25*height)-(5*age)+5
         return bmr
-    elif gender == "female":
+    elif gender == "Female":
         bmr = (10*weight)+(6.25*height)-(5*age)-161
         return bmr
 

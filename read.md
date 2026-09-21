@@ -5,4 +5,4 @@
 - (RAG)rag retrival argumented generation
 
 - to run
-# streamlit run app.py 
+# python -m streamlit run app.py 
