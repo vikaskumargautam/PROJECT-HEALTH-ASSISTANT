@@ -6,3 +6,4 @@
 
 - to run
 # python -m streamlit run app.py 
+# python -m pip install openai
